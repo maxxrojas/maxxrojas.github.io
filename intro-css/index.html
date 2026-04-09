@@ -1,0 +1,115 @@
+<!doctype html>
+<html data-theme="light">
+    <head>
+        <title>Clase antes de vacaciones</title>
+        <link rel="stylesheet" href="estilos.css" />
+        <link rel="stylesheet" href="css/pico.min.css" />
+    </head>
+    <body>
+        <h1 id="encabezado">Encabezado</h1>
+        <div id="contenedor">
+            <div class="elemento">Sección 1</div>
+            <div class="elemento">Sección 2</div>
+            <div class="elemento">Sección 1</div>
+            <div class="elemento">Sección 2</div>
+        </div>
+        <button id="uno">Obtener dato</button>
+        <div id="json"></div>
+
+        <div class="artists">
+            <label for="artist-search">Buscar artista:</label>
+            <input
+                type="text"
+                placeholder="Buscar artista..."
+                id="artist-search"
+            />
+            <button id="search-button" class="">Buscar</button>
+            <div id="artist-results">
+                <article id="artist-card"></article>
+            </div>
+        </div>
+
+        <style>
+            :root {
+                --pico-border-radius: 1rem;
+                --pico-typography-spacing-vertical: 1.5rem;
+                --pico-form-element-spacing-vertical: 1rem;
+                --pico-form-element-spacing-horizontal: 1.25rem;
+            }
+        </style>
+    </body>
+</html>
+
+<script>
+    let t = 1986;
+    const c = 3.28;
+    console.log(t);
+    console.log(c);
+
+    let p = {
+        titulo: "Llano en llamas",
+        autor: "Juan Rulfo",
+    };
+    console.log(p.autor);
+
+    const triplicar = (a) => a * 3;
+    console.log(triplicar(5));
+
+    // Manipulación del DOM
+    let d = document.createElement("p");
+    d.textContent = "¡Hola, mundo!";
+    d.setAttribute("style", "color: yellow;");
+
+    document.getElementById("encabezado").appendChild(d);
+
+    const getJson = async () => {
+        const response = await fetch(
+            "https://openlibrary.org/subjects/love.json?published_in=1500-1600",
+        );
+        const data = await response.json();
+        console.log(data);
+        let p = document.createElement("p");
+        p.textContent = `${data.works[0].title} `;
+        document.getElementById("json").appendChild(p);
+    };
+    // getJson();
+
+    let e = document.getElementById("uno");
+    e.addEventListener("click", getJson);
+
+    // Uso de fetch para API de artistas
+    const apiUrl = "https://www.theaudiodb.com/api/v1/json/123/search.php?";
+    const searchButton = document.getElementById("search-button");
+    const artistSearchInput = document.getElementById("artist-search");
+    const artistResults = document.getElementById("artist-results");
+
+    const getArtistData = async (artistName) => {
+        const response = await fetch(`${apiUrl}s=${artistName}`);
+        const data = await response.json();
+        return data;
+    };
+
+    createComponent = (data) => {
+        let artists = document.createElement("div");
+        //Name of the artist
+        artists.innerHTML = data.artists[0].strArtist;
+        // Image of the artist
+        let img = document.createElement("img");
+        img.src = data.artists[0].strArtistThumb;
+        artists.appendChild(img);
+        document.getElementById("artist-card").appendChild(artists);
+    };
+
+    searchButton.addEventListener("click", async () => {
+        const artistName = artistSearchInput.value;
+        const data = await getArtistData(artistName);
+
+        createComponent(data);
+    });
+
+    // createComponent(async () => await getArtistData("Coldplay"));
+    (async () => {
+        createComponent(await getArtistData("Avicii"));
+        createComponent(await getArtistData("Bad bunny"));
+    })();
+</script>

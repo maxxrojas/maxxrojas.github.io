@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>La página más fea</title>
+    </head>
+    <body>
+        <h1>La página más fea</h1>
+        <section class="html-section">
+            <h1>HTML</h1>
+
+            <section class="introduction">
+                <h2>Introduction</h2>
+
+                <article>
+                    <h3>What is HTML?</h3>
+                    <p>
+                        HTML (HyperText Markup Language) is the standard markup
+                        language used to create web pages. It provides the
+                        structure and content of websites using a system of tags
+                        and elements.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Explain the head and the body tags</h3>
+                    <p>
+                        <strong>Head tag:</strong> Contains metadata about the
+                        document including title, charset, viewport, links to
+                        stylesheets, and scripts. This information is not
+                        displayed on the page.
+                    </p>
+                    <p>
+                        <strong>Body tag:</strong> Contains all the visible
+                        content of the webpage including text, images, links,
+                        and other elements that users see and interact with.
+                    </p>
+                </article>
+            </section>
+
+            <section class="basic-tags">
+                <h2>Basic Tags</h2>
+
+                <article>
+                    <h3>Semantic Tags</h3>
+                    <ul>
+                        <li>
+                            <strong>section:</strong> Groups related content
+                            together
+                        </li>
+                        <li>
+                            <strong>article:</strong> Contains independent,
+                            self-contained content
+                        </li>
+                        <li>
+                            <strong>aside:</strong> Contains sidebar or
+                            tangential content
+                        </li>
+                        <li>
+                            <strong>header:</strong> Contains introductory
+                            content or navigation
+                        </li>
+                        <li>
+                            <strong>footer:</strong> Contains footer information
+                            like copyright
+                        </li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Unordered List Example</h3>
+                    <ul class="example-list">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Ordered List Example</h3>
+                    <ol class="example-list">
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ol>
+                </article>
+
+                <article>
+                    <h3>Basic Table Example</h3>
+                    <table class="example-table">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data 1</td>
+                                <td>Data 2</td>
+                                <td>Data 3</td>
+                            </tr>
+                            <tr>
+                                <td>Data 4</td>
+                                <td>Data 5</td>
+                                <td>Data 6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+        </section>
+
+        <section class="css-section">
+            <h1>CSS</h1>
+
+            <section class="css-introduction">
+                <h2>Introduction</h2>
+
+                <article>
+                    <h3>What is CSS?</h3>
+                    <p>
+                        CSS (Cascading Style Sheets) is a stylesheet language
+                        used to describe the presentation and styling of HTML
+                        documents. It controls colors, fonts, layouts, spacing,
+                        and visual effects.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>What is the purpose of CSS?</h3>
+                    <p>
+                        CSS separates content from presentation, allowing you to
+                        style elements consistently across multiple pages and
+                        create responsive, visually appealing designs.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>How to apply CSS to HTML (3 options)</h3>
+                    <ol>
+                        <li>
+                            <strong>Inline CSS:</strong> Apply styles directly
+                            to elements using the style attribute: &lt;p
+                            style="color: blue;"&gt;
+                        </li>
+                        <li>
+                            <strong>Internal CSS:</strong> Write styles in a
+                            &lt;style&gt; tag within the head section
+                        </li>
+                        <li>
+                            <strong>External CSS:</strong> Link an external
+                            stylesheet using &lt;link rel="stylesheet"
+                            href="styles.css"&gt;
+                        </li>
+                    </ol>
+                </article>
+
+                <article>
+                    <h3>What is a selector and CSS rule?</h3>
+                    <p>
+                        <strong>Selector:</strong> Targets which HTML elements
+                        to style (e.g., p, .class, #id)
+                    </p>
+                    <p>
+                        <strong>CSS Rule:</strong> Consists of a selector and a
+                        declaration block with properties and values: selector {
+                        property: value; }
+                    </p>
+                </article>
+            </section>
+
+            <section class="basic-css">
+                <h2>Basic CSS</h2>
+
+                <article>
+                    <h3>Selectors</h3>
+                    <ul>
+                        <li>
+                            <strong>Tag Selector:</strong> Selects all elements
+                            of a specific tag (p { color: blue; })
+                        </li>
+                        <li>
+                            <strong>Class Selector:</strong> Selects elements
+                            with a specific class (.highlight { background:
+                            yellow; })
+                        </li>
+                        <li>
+                            <strong>Tag and Class Selector:</strong> Combines
+                            tag and class (p.highlight { color: red; })
+                        </li>
+                        <li>
+                            <strong>ID Selector:</strong> Selects a single
+                            element with a specific id (#header { font-size:
+                            24px; })
+                        </li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Class vs ID</h3>
+                    <p>
+                        <strong>Class:</strong> Can be used on multiple
+                        elements, reusable, used for styling groups of elements
+                    </p>
+                    <p>
+                        <strong>ID:</strong> Should be unique to one element,
+                        used for specific styling or JavaScript targeting
+                    </p>
+                </article>
+
+                <article>
+                    <h3>CSS Box Model</h3>
+                    <p>
+                        The box model consists of (from inside out): content,
+                        padding, border, and margin. Every element has these
+                        layers that affect its size and spacing.
+                    </p>
+                    <div class="box-model-example">
+                        <p>
+                            Example: A box with 20px padding, 2px border, and
+                            10px margin
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Media Queries</h3>
+                    <p>
+                        Media queries allow you to apply different styles based
+                        on device characteristics like screen size. Example:
+                        @media (max-width: 768px) { body { font-size: 14px; } }
+                    </p>
+                </article>
+            </section>
+
+            <section class="layout-css">
+                <h2>Layout CSS</h2>
+
+                <article>
+                    <h3>Display: Grid</h3>
+                    <p>
+                        Grid creates a two-dimensional layout system with rows
+                        and columns. Use grid-template-columns and
+                        grid-template-rows to define the structure.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Display: Flex</h3>
+                    <p>
+                        Flexbox creates a one-dimensional layout for arranging
+                        items in rows or columns. Use flex-direction,
+                        justify-content, and align-items to control alignment
+                        and spacing.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Resources</h3>
+                    <p>
+                        Practice CSS Selectors:
+                        <a href="https://flukeout.github.io/" target="_blank"
+                            >CSS Diner (32 levels)</a
+                        >
+                    </p>
+                    <p>
+                        Practice Flexbox:
+                        <a href="https://flexboxfroggy.com/" target="_blank"
+                            >Flexbox Froggy (24 levels)</a
+                        >
+                    </p>
+                </article>
+            </section>
+        </section>
+    </body>
+</html>
