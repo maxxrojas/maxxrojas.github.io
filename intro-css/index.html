@@ -24,9 +24,7 @@
                 id="artist-search"
             />
             <button id="search-button" class="">Buscar</button>
-            <div id="artist-results">
-                <article id="artist-card"></article>
-            </div>
+            <div id="artist-results"></div>
         </div>
 
         <style>
@@ -97,7 +95,7 @@
         let img = document.createElement("img");
         img.src = data.artists[0].strArtistThumb;
         artists.appendChild(img);
-        document.getElementById("artist-card").appendChild(artists);
+        document.getElementById("artist-results").appendChild(artists);
     };
 
     searchButton.addEventListener("click", async () => {
