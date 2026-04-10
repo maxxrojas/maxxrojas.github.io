@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Actividad en Clase</title>
+    </head>
+    <body>
+        <section>
+            <h2>1</h2>
+            <p>Html con enlace a IMDB y trailer</p>
+            <br />
+            <a href="https://www.imdb.com/title/tt0317219/?ref_=fn_t_1">Cars</a>
+            <div>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/SbXIj2T-_uk?si=1KiStREFZkZR3zOj"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                    "
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <h3>Respuesta Creativa</h3>
+            <p>a</p>
+        </section>
+        <section>
+            <h2>Último Amanecer</h2>
+            <p>Fotos de la actividad del último amanecer que vimos.</p>
+            <p>La más creativa fue en Miami con sus primos.</p>
+            <div class="galeria">
+                <img src="Fotos/1.JPG" alt="Amanecer 1" />
+                <img src="Fotos/2.jpeg" alt="Amanecer 2" />
+                <img src="Fotos/3.jpeg" alt="Amanecer 3" />
+                <img src="Fotos/4.jpeg" alt="Amanecer 4" />
+                <img src="Fotos/5.jpeg" alt="Amanecer 5" />
+            </div>
+        </section>
+    </body>
+</html>
+
+<style>
+    body {
+        background-color: #2e2e2e;
+        color: wheat;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    a {
+        color: purple;
+        text-decoration: none;
+    }
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .galeria img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+</style>
