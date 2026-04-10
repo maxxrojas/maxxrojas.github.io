@@ -4,9 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>La página más fea</title>
+        <link rel="stylesheet" href="main.css" />
     </head>
     <body>
         <h1>La página más fea</h1>
+
         <section class="html-section">
             <h1>HTML</h1>
 
@@ -16,25 +18,26 @@
                 <article>
                     <h3>What is HTML?</h3>
                     <p>
-                        HTML (HyperText Markup Language) is the standard markup
-                        language used to create web pages. It provides the
-                        structure and content of websites using a system of tags
-                        and elements.
+                        HTML stands for HyperText Markup Language. It's
+                        basically the skeleton of every website, it tells the
+                        browser what goes on the page. You use tags to wrap your
+                        content, like putting labels on boxes so the browser
+                        knows what's inside.
                     </p>
                 </article>
 
                 <article>
                     <h3>Explain the head and the body tags</h3>
                     <p>
-                        <strong>Head tag:</strong> Contains metadata about the
-                        document including title, charset, viewport, links to
-                        stylesheets, and scripts. This information is not
-                        displayed on the page.
+                        <strong>Head tag:</strong> This is where you put stuff
+                        the browser needs to know but doesn't actually show the
+                        user. Things like the page title, what language the text
+                        is in, or links to your CSS file go here.
                     </p>
                     <p>
-                        <strong>Body tag:</strong> Contains all the visible
-                        content of the webpage including text, images, links,
-                        and other elements that users see and interact with.
+                        <strong>Body tag:</strong> Everything the user actually
+                        sees goes in here: your text, images, buttons, all of
+                        it. If it shows up on screen, it's in the body.
                     </p>
                 </article>
             </section>
@@ -46,24 +49,24 @@
                     <h3>Semantic Tags</h3>
                     <ul>
                         <li>
-                            <strong>section:</strong> Groups related content
-                            together
+                            <strong>section:</strong> Used to group related
+                            stuff together on the page
                         </li>
                         <li>
-                            <strong>article:</strong> Contains independent,
-                            self-contained content
+                            <strong>article:</strong> For content that makes
+                            sense on its own, like a blog post or a news story
                         </li>
                         <li>
-                            <strong>aside:</strong> Contains sidebar or
-                            tangential content
+                            <strong>aside:</strong> Side content, like a sidebar
+                            or a fun fact that doesn't fit in the main flow
                         </li>
                         <li>
-                            <strong>header:</strong> Contains introductory
-                            content or navigation
+                            <strong>header:</strong> Usually has the logo,
+                            navigation, or intro stuff at the top
                         </li>
                         <li>
-                            <strong>footer:</strong> Contains footer information
-                            like copyright
+                            <strong>footer:</strong> The bottom of the page,
+                            copyright, links, contact info, that kind of thing
                         </li>
                     </ul>
                 </article>
@@ -122,19 +125,21 @@
                 <article>
                     <h3>What is CSS?</h3>
                     <p>
-                        CSS (Cascading Style Sheets) is a stylesheet language
-                        used to describe the presentation and styling of HTML
-                        documents. It controls colors, fonts, layouts, spacing,
-                        and visual effects.
+                        CSS stands for Cascading Style Sheets. While HTML gives
+                        the page its structure, CSS is what makes it look good
+                        (or in this case, really bad). You use it to change
+                        colors, fonts, sizes, spacing, basically anything
+                        visual.
                     </p>
                 </article>
 
                 <article>
                     <h3>What is the purpose of CSS?</h3>
                     <p>
-                        CSS separates content from presentation, allowing you to
-                        style elements consistently across multiple pages and
-                        create responsive, visually appealing designs.
+                        The main idea is to keep your styling separate from your
+                        content. That way you can change how the whole site
+                        looks without touching the HTML. It also makes it way
+                        easier to keep things consistent across multiple pages.
                     </p>
                 </article>
 
@@ -142,18 +147,21 @@
                     <h3>How to apply CSS to HTML (3 options)</h3>
                     <ol>
                         <li>
-                            <strong>Inline CSS:</strong> Apply styles directly
-                            to elements using the style attribute: &lt;p
-                            style="color: blue;"&gt;
+                            <strong>Inline CSS:</strong> You write the style
+                            right inside the tag. Like &lt;p style="color:
+                            blue;"&gt;. It works but gets messy fast.
                         </li>
                         <li>
-                            <strong>Internal CSS:</strong> Write styles in a
-                            &lt;style&gt; tag within the head section
+                            <strong>Internal CSS:</strong> You write all your
+                            styles in a &lt;style&gt; tag inside the
+                            &lt;head&gt;. Better than inline, but still only
+                            applies to one page.
                         </li>
                         <li>
-                            <strong>External CSS:</strong> Link an external
-                            stylesheet using &lt;link rel="stylesheet"
-                            href="styles.css"&gt;
+                            <strong>External CSS:</strong> You make a separate
+                            .css file and link it with &lt;link rel="stylesheet"
+                            href="styles.css"&gt;. This is the right way to do
+                            it.
                         </li>
                     </ol>
                 </article>
@@ -161,13 +169,14 @@
                 <article>
                     <h3>What is a selector and CSS rule?</h3>
                     <p>
-                        <strong>Selector:</strong> Targets which HTML elements
-                        to style (e.g., p, .class, #id)
+                        <strong>Selector:</strong> It's how you tell CSS which
+                        element to style. Could be a tag like p, a class like
+                        .box, or an id like #header.
                     </p>
                     <p>
-                        <strong>CSS Rule:</strong> Consists of a selector and a
-                        declaration block with properties and values: selector {
-                        property: value; }
+                        <strong>CSS Rule:</strong> It's the selector plus the
+                        actual styles. Looks like this: selector { property:
+                        value; }. Pretty simple once you get the hang of it.
                     </p>
                 </article>
             </section>
@@ -179,22 +188,26 @@
                     <h3>Selectors</h3>
                     <ul>
                         <li>
-                            <strong>Tag Selector:</strong> Selects all elements
-                            of a specific tag (p { color: blue; })
+                            <strong>Tag Selector:</strong> Targets every element
+                            of that type. Like p { color: blue; } makes all
+                            paragraphs blue.
                         </li>
                         <li>
-                            <strong>Class Selector:</strong> Selects elements
-                            with a specific class (.highlight { background:
-                            yellow; })
+                            <strong>Class Selector:</strong> Targets elements
+                            with a specific class. .highlight { background:
+                            yellow; } only affects things with
+                            class="highlight".
                         </li>
                         <li>
-                            <strong>Tag and Class Selector:</strong> Combines
-                            tag and class (p.highlight { color: red; })
+                            <strong>Tag and Class Selector:</strong> You can
+                            combine them. p.highlight { color: red; } only
+                            targets paragraphs with that class, not other
+                            elements.
                         </li>
                         <li>
-                            <strong>ID Selector:</strong> Selects a single
-                            element with a specific id (#header { font-size:
-                            24px; })
+                            <strong>ID Selector:</strong> Targets one specific
+                            element. #header { font-size: 24px; }. IDs should
+                            only be used once per page.
                         </li>
                     </ul>
                 </article>
@@ -202,26 +215,29 @@
                 <article>
                     <h3>Class vs ID</h3>
                     <p>
-                        <strong>Class:</strong> Can be used on multiple
-                        elements, reusable, used for styling groups of elements
+                        <strong>Class:</strong> You can reuse it on as many
+                        elements as you want. Great for styling groups of things
+                        the same way.
                     </p>
                     <p>
-                        <strong>ID:</strong> Should be unique to one element,
-                        used for specific styling or JavaScript targeting
+                        <strong>ID:</strong> Should only be on one element per
+                        page. Use it when something is unique, like the main nav
+                        or a specific section you need to target.
                     </p>
                 </article>
 
                 <article>
                     <h3>CSS Box Model</h3>
                     <p>
-                        The box model consists of (from inside out): content,
-                        padding, border, and margin. Every element has these
-                        layers that affect its size and spacing.
+                        Every element on the page is basically a box. From the
+                        inside out it goes: content, then padding, then border,
+                        then margin. Understanding this makes it way easier to
+                        figure out why things don't line up the way you expect.
                     </p>
                     <div class="box-model-example">
                         <p>
-                            Example: A box with 20px padding, 2px border, and
-                            10px margin
+                            This box has 20px padding, a dashed 5px border, and
+                            10px margin. You can see how it all stacks up.
                         </p>
                     </div>
                 </article>
@@ -229,9 +245,10 @@
                 <article>
                     <h3>Media Queries</h3>
                     <p>
-                        Media queries allow you to apply different styles based
-                        on device characteristics like screen size. Example:
-                        @media (max-width: 768px) { body { font-size: 14px; } }
+                        Media queries let you apply different styles depending
+                        on the screen size. So you can make things look decent
+                        on both a phone and a desktop. Example: @media
+                        (max-width: 768px) { body { font-size: 14px; } }
                     </p>
                 </article>
             </section>
@@ -242,36 +259,41 @@
                 <article>
                     <h3>Display: Grid</h3>
                     <p>
-                        Grid creates a two-dimensional layout system with rows
-                        and columns. Use grid-template-columns and
-                        grid-template-rows to define the structure.
+                        Grid lets you build layouts with rows and columns at the
+                        same time. It's great for bigger page layouts. You
+                        define how many columns you want and the browser figures
+                        out the rest.
                     </p>
                 </article>
 
                 <article>
                     <h3>Display: Flex</h3>
                     <p>
-                        Flexbox creates a one-dimensional layout for arranging
-                        items in rows or columns. Use flex-direction,
-                        justify-content, and align-items to control alignment
-                        and spacing.
+                        Flexbox is for arranging things in a single row or
+                        column. Super useful for navbars, card rows, or
+                        centering stuff. Once it clicks it's hard to go back to
+                        not using it.
                     </p>
                 </article>
 
                 <article>
-                    <h3>Resources</h3>
+                    <h3>Resources I used to practice</h3>
                     <p>
-                        Practice CSS Selectors:
                         <a href="https://flukeout.github.io/" target="_blank"
                             >CSS Diner (32 levels)</a
-                        >
+                        >, a game where you practice CSS selectors. It was kind
+                        of fun.
                     </p>
+                    <img src="flukeout.png" alt="screenshot of CSS Diner" />
                     <p>
-                        Practice Flexbox:
                         <a href="https://flexboxfroggy.com/" target="_blank"
                             >Flexbox Froggy (24 levels)</a
-                        >
+                        >, you move frogs around using flexbox.
                     </p>
+                    <img
+                        src="flexbox-froggy.png"
+                        alt="screenshot of Flexbox Froggy"
+                    />
                 </article>
             </section>
         </section>

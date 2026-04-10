@@ -31,7 +31,23 @@
         <!-- Search bar -->
         <div class="search-bar">
             <input type="text" placeholder="Search Keywords" />
-            <button>Search</button>
+            <button>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    />
+                </svg>
+            </button>
         </div>
 
         <!-- Navigation in categories -->
@@ -47,80 +63,87 @@
         <!-- Featured -->
         <div class="featured">
             <h2>Featured</h2>
-            <div class="big-featured-item">
-                <img
-                    src="../files/arton717.png"
-                    alt="The Intolerance Network"
-                />
-                <h3>The Intolerance Network</h3>
-                <p>
-                    Today, 5th August 2021, WikiLeaks publishes "The Intolerance
-                    Network" over 17,000 documents from internationally active
-                    right wing campaigning organisations HazteOir and CitizenGO.
-                </p>
-                <p>05 August 2021</p>
-            </div>
-            <div class="featured-item">
-                <img src="../files/arton716.jpg" alt="Fishrot" />
-                <h3>Custom Search</h3>
-                <p>
-                    Fishrot - Today, November 12, WikiLeaks publishes over 30000
-                    documents from SAMHERJI
-                </p>
-                <p>12 November 2019</p>
-            </div>
-            <div class="featured-item">
-                <img src="../files/arton715.png" alt="OPCW Douma" />
-                <h3>OPCW Douma</h3>
-                <p>
-                    Today, October 23, WikiLeaks publishes a statement made by a
-                    panel that listened to testimony and reviewed evidence from
-                    a whistleblower from the OPCW (update)
-                </p>
-                <p>23 October 2019</p>
-            </div>
-            <div class="featured-item">
-                <img src="../files/rubon33.png" alt="Pope's Orders" />
-                <h3>Pope's Orders</h3>
-                <p>
-                    Today, January 30th WikiLeaks publishes a set of documents
-                    from the Catholic Church, shedding light on the power
-                    struggle within highest offices
-                </p>
-                <p>30 January 2019</p>
-            </div>
-            <div class="featured-item">
-                <img
-                    src="../files/arton706.jpg"
-                    alt="US Embassy Shopping List"
-                />
-                <h3>US Embassy Shopping List</h3>
-                <p>
-                    Today, 21 December 2018, WikiLeaks publishes a searchable
-                    database of more than 16,000 procurement requests posted by
-                    United States embassies around the world.
-                </p>
-                <p>21 December 2018</p>
-            </div>
-            <div class="featured-item">
-                <img src="../files/arton704.png" alt="Amazon Atlas" />
-                <h3>Amazon Atlas</h3>
-                <p>
-                    Today, 11 Oct 2018, WikiLeaks publishes a highly
-                    confidential internal document from the cloud computing
-                    provider Amazon.
-                </p>
-                <p>11 October 2018</p>
-            </div>
-            <div class="featured-item">
-                <img src="../files/arton703.png" alt="Dealmaker: Al Yousef" />
-                <h3>Dealmaker: Al Yousef</h3>
-                <p>
-                    Today, 28 September 2018, WikiLeaks releases a secret
-                    document from the ICC portaining a dispute over commission
-                    payment in relation to $3.6B arms deal
-                </p>
-                <p>28 September 2018</p>
+            <div class="grid">
+                <div class="big-card">
+                    <img
+                        src="../files/arton717.png"
+                        alt="The Intolerance Network"
+                    />
+                    <h3>The Intolerance Network</h3>
+                    <p>
+                        Today, 5th August 2021, WikiLeaks publishes "The
+                        Intolerance Network" over 17,000 documents from
+                        internationally active right wing campaigning
+                        organisations HazteOir and CitizenGO.
+                    </p>
+                    <span class="date">05 August 2021</span>
+                </div>
+                <div class="card">
+                    <img src="../files/arton716.jpg" alt="Fishrot" />
+                    <h3>Fishrot</h3>
+                    <p>
+                        Today, November 12, WikiLeaks publishes over 30000
+                        documents from SAMHERJI
+                    </p>
+                    <span class="date">12 November 2019</span>
+                </div>
+                <div class="card">
+                    <img src="../files/arton715.png" alt="OPCW Douma" />
+                    <h3>OPCW Douma</h3>
+                    <p>
+                        Today, October 23, WikiLeaks publishes a statement made
+                        by a panel that listened to testimony and reviewed
+                        evidence from a whistleblower from the OPCW (update)
+                    </p>
+                    <span class="date">23 October 2019</span>
+                </div>
+                <div class="card">
+                    <img src="../files/rubon33.png" alt="Pope's Orders" />
+                    <h3>Pope's Orders</h3>
+                    <p>
+                        Today, January 30th WikiLeaks publishes a set of
+                        documents from the Catholic Church, shedding light on
+                        the power struggle within highest offices
+                    </p>
+                    <span class="date">30 January 2019</span>
+                </div>
+                <div class="card">
+                    <img
+                        src="../files/arton706.jpg"
+                        alt="US Embassy Shopping List"
+                    />
+                    <h3>US Embassy Shopping List</h3>
+                    <p>
+                        Today, 21 December 2018, WikiLeaks publishes a
+                        searchable database of more than 16,000 procurement
+                        requests posted by United States embassies around the
+                        world.
+                    </p>
+                    <span class="date">21 December 2018</span>
+                </div>
+                <div class="card">
+                    <img src="../files/arton704.png" alt="Amazon Atlas" />
+                    <h3>Amazon Atlas</h3>
+                    <p>
+                        Today, 11 Oct 2018, WikiLeaks publishes a highly
+                        confidential internal document from the cloud computing
+                        provider Amazon.
+                    </p>
+                    <span class="date">11 October 2018</span>
+                </div>
+                <div class="card">
+                    <img
+                        src="../files/arton703.png"
+                        alt="Dealmaker: Al Yousef"
+                    />
+                    <h3>Dealmaker: Al Yousef</h3>
+                    <p>
+                        Today, 28 September 2018, WikiLeaks releases a secret
+                        document from the ICC portaining a dispute over
+                        commission payment in relation to $3.6B arms deal
+                    </p>
+                    <span class="date">28 September 2018</span>
+                </div>
             </div>
         </div>
 
@@ -132,9 +155,8 @@
                 <div class="recommendation-links">
                     <div class="recommendation">
                         <a href="https://our.wikileaks.org" target="_blank">
-                            <div class="teaser">
+                            <div class="image">
                                 <img
-                                    class="spip_logos"
                                     alt=""
                                     src="../files/arton666.png"
                                     width="360"
@@ -151,9 +173,8 @@
 
                     <div class="recommendation">
                         <a href="https://www.torproject.org/" target="_blank">
-                            <div class="teaser">
+                            <div class="image">
                                 <img
-                                    class="spip_logos"
                                     alt=""
                                     src="../files/arton401.png"
                                     width="360"
@@ -171,9 +192,8 @@
 
                     <div class="recommendation">
                         <a href="https://tails.boum.org/" target="_blank">
-                            <div class="teaser">
+                            <div class="image">
                                 <img
-                                    class="spip_logos"
                                     alt=""
                                     src="../files/arton405.png"
                                     width="360"
@@ -191,9 +211,8 @@
 
                     <div class="recommendation">
                         <a href="https://www.couragefound.org/" target="_blank">
-                            <div class="teaser">
+                            <div class="image">
                                 <img
-                                    class="spip_logos"
                                     alt=""
                                     src="../files/arton404.png"
                                     width="360"
@@ -211,9 +230,8 @@
 
                     <div class="recommendation">
                         <a href="https://www.bitcoin.org/" target="_blank">
-                            <div class="teaser">
+                            <div class="image">
                                 <img
-                                    class="spip_logos"
                                     alt=""
                                     src="../files/arton403.png"
                                     width="360"
@@ -231,7 +249,7 @@
                 </div>
 
                 <div class="social-links">
-                    <div>
+                    <div class="image">
                         <a
                             href="https://www.facebook.com/wikileaks"
                             target="_blank"
@@ -244,7 +262,7 @@
                             />
                         </a>
                     </div>
-                    <div>
+                    <div class="image">
                         <a
                             href="https://twitter.com/wikileaks"
                             target="_blank"
