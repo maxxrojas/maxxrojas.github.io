@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mi página con Picnic CSS</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic" />
+
+        <style>
+            .flex.demo {
+                margin: 0.2em 0;
+                background: #dbe2dc;
+                text-align: center;
+            }
+            .flex.demo div {
+                border: 0.1em solid pink;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="un_boton">Haz algo</button>
+        <div class="flex two four-1200 demo">
+            <div id="bio">1</div>
+            <div id="imagen">2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+        <button id="like">👍 Like</button>
+        <button id="dislike">👎 Dislike</button>
+
+        <script>
+            let imagenActual = null;
+            let un_boton;
+
+            document.addEventListener("DOMContentLoaded", function () {
+                document
+                    .getElementById("un_boton")
+                    .addEventListener("click", irPorImagen);
+
+                document
+                    .getElementById("like")
+                    .addEventListener("click", () => votar(1));
+                document
+                    .getElementById("dislike")
+                    .addEventListener("click", () => votar(0));
+
+                console.log("DOM listo");
+            });
+
+            async function obtenerJSON() {
+                // const respuesta = await fetch('');
+                // const datos = await respuesta.json();
+                // console.log(datos);
+                //const textoArtista = document.createElement('p');
+                //textoArtista.textContent =
+                //biografia.appendChild(textoArtista);
+                //const imagenArtista= document.createElement('');
+                //imagenArtista.setAttribute('src', '');
+            }
+
+            async function irPorAlgo() {
+                try {
+                    const respuesta = await fetch(
+                        "https://api.thedogapi.com/v1/breeds?limit=2",
+                        {
+                            method: "GET",
+                            headers: {
+                                "x-api-key":
+                                    "live_b3pbWyQ8v7sqraeDZg3Oma6D6676HVNcBYEvziDzGdx2T8uFg4bdP4GG0pqbwCEk",
+                            },
+                        },
+                    );
+                    if (!respuesta.ok) {
+                        console.log("Error");
+                        //throw new Error("Error");
+                    }
+                    const data = await respuesta.json();
+                    console.log(data);
+                } catch (error) {
+                    console.error("Error:", error.message);
+                }
+            }
+            async function irPorImagen() {
+                try {
+                    const respuesta = await fetch(
+                        "https://api.thedogapi.com/v1/images/search?limit=1",
+                        {
+                            method: "GET",
+                            headers: {
+                                "x-api-key":
+                                    "live_b3pbWyQ8v7sqraeDZg3Oma6D6676HVNcBYEvziDzGdx2T8uFg4bdP4GG0pqbwCEk",
+                            },
+                        },
+                    );
+                    if (!respuesta.ok) {
+                        console.log("Error");
+                        //throw new Error("Error");
+                    }
+                    const image = await respuesta.json();
+                    imagenActual = image[0].id;
+                    const contenedor = document.getElementById("bio");
+                    contenedor.innerHTML = `<img src="${image[0].url}" width="300">`;
+                } catch (error) {
+                    console.error("Error:", error.message);
+                }
+            }
+
+            async function votar(valor) {
+                if (!imagenActual) {
+                    alert("Primero carga un perro 🐶");
+                    return;
+                }
+                try {
+                    const respuesta = await fetch(
+                        "https://api.thedogapi.com/v1/votes",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "x-api-key":
+                                    "live_b3pbWyQ8v7sqraeDZg3Oma6D6676HVNcBYEvziDzGdx2T8uFg4bdP4GG0pqbwCEk",
+                            },
+                            body: JSON.stringify({
+                                image_id: imagenActual,
+                                value: valor, // 1 = like, 0 = dislike
+                            }),
+                        },
+                    );
+                    if (!respuesta.ok) {
+                        console.log("Error");
+                        //throw new Error("Error");
+                    }
+                    const data = await respuesta.json();
+                    irPorImagen();
+                } catch (error) {
+                    console.error("Error:", error.message);
+                }
+            }
+        </script>
+    </body>
+</html>
