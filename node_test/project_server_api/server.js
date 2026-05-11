@@ -133,7 +133,7 @@ const servidor = http.createServer((req, res) => {
     manejarRuta404(req, res);
 });
 
-const puerto = 1985;
+const puerto = process.env.PORT || 1985;
 servidor.listen(puerto, () => {
     console.log(`Servidor escuchando en el puerto ${puerto}`);
 });
