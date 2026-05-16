@@ -36,6 +36,11 @@ app.get("/opinion", (req, res) => {
     res.sendFile(path.join(__dirname, "opinion.html"));
 });
 
+// GET /magnolia -> página de la magnolia
+app.get("/magnolia", (req, res) => {
+    res.sendFile(path.join(__dirname, "magnolia.html"));
+});
+
 // ---------- Rutas JSON ----------
 // GET /api/usuarios -> regresa lista de usuarios
 app.get("/api/usuarios", (req, res) => {
@@ -59,7 +64,9 @@ app.get("/api/movimientos", (req, res) => {
 // ---------- 404 ----------
 // Middleware final: si nada respondió antes, mandamos un 404 divertido.
 app.use((req, res) => {
-    res.status(404).send("Oops! Estás perdido? Recuerda buscar páginas que si existan.");
+    res.status(404).send(
+        "Oops! Estás perdido? Recuerda buscar páginas que si existan.",
+    );
 });
 
 const puerto = 1984;
